@@ -48,6 +48,20 @@
                 console.log("Fitur notifikasi diijinkan.");
             });
         }
+
+        function showNotifikasiSederhana() {
+            const title = 'Notifikasi Sederhana';
+            const options = {
+                'body': 'Ini adalah konten notifikasi. \nBisa menggunakan baris baru.',
+            }
+            if (Notification.permission === 'granted') {
+                navigator.serviceWorker.ready.then(function(registration) {
+                    registration.showNotification(title, options);
+                });
+            } else {
+                console.error('FItur notifikasi tidak diijinkan.');
+            }
+        }
     </script>
 </body>
 
