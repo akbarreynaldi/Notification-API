@@ -52,8 +52,9 @@
         function showNotifikasiSederhana() {
             const title = 'Notifikasi Sederhana';
             const options = {
-                'body': 'Ini adalah konten notifikasi. \nBisa menggunakan baris baru.',
                 requireInteraction: true,
+                'body': 'Ini adalah konten notifikasi. \nBisa menggunakan baris baru.',
+                'icon': '/img/logo.png'
             }
             if (Notification.permission === 'granted') {
                 navigator.serviceWorker.ready.then(function(registration) {
