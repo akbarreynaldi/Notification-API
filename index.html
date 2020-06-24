@@ -53,13 +53,14 @@
             const title = 'Notifikasi Sederhana';
             const options = {
                 'body': 'Ini adalah konten notifikasi. \nBisa menggunakan baris baru.',
+                requireInteraction: true,
             }
             if (Notification.permission === 'granted') {
                 navigator.serviceWorker.ready.then(function(registration) {
                     registration.showNotification(title, options);
                 });
             } else {
-                console.error('FItur notifikasi tidak diijinkan.');
+                console.error('Fitur notifikasi tidak diijinkan.');
             }
         }
     </script>
